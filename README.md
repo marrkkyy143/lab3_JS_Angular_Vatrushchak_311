@@ -1,59 +1,88 @@
-# ProductCatalog
+# Angular Product Catalog
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.6.
+Laboratory Work №3 — Angular
 
-## Development server
+## Description
 
-To start a local development server, run:
+A web application for managing a product catalog, developed using Angular.
 
-```bash
-ng serve
-```
+The application allows users to view products, filter them by category, navigate through pages, view product details, add new products, edit existing products, and delete products.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Technologies
 
-## Code scaffolding
+- Angular
+- TypeScript
+- HTML and SCSS
+- Bootstrap
+- RxJS
+- FakeStore API
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Features
 
-```bash
-ng generate component component-name
-```
+- Display a list of products
+- Filter products by category
+- Pagination
+- View product details
+- Add new products
+- Edit products
+- Delete products
+- Reactive Forms with validation
+- HTTP requests using HttpClient
+- HTTP logging interceptor
+- Angular routing
+- Signals
+- Unit tests
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Installation and запуск
 
-```bash
-ng generate --help
-```
+### Requirements
 
-## Building
+- Node.js
+- npm
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+### 1. Clone the repository
 
 ```bash
-ng e2e
+git clone https://github.com/marrkkyy143/lab3_JS_Angular_Vatrushchak_311.git
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### 2. Open the project folder
 
-## Additional Resources
+```bash
+cd lab3_JS_Angular_Vatrushchak_311
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Run the application
+
+```bash
+npx ng serve -o
+```
+
+The application will open at:
+
+http://localhost:4200/
+
+## Running tests
+
+To run unit tests, use:
+
+```bash
+npx ng test
+```
+
+## API
+
+The application uses [FakeStore API](https://fakestoreapi.com/) to retrieve product data and perform CRUD operations.
+
+**Note:** FakeStore API simulates create, update, and delete requests. Changes are not permanently stored on the server.
+
+## Author
+
+Laboratory Work №3 — Angular
+
