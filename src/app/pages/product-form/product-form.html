@@ -1,0 +1,66 @@
+<div class="container mt-5">
+  <h2 class="mb-4">
+    {{ isEditMode ? 'Edit Product' : 'Add New Product' }}
+  </h2>
+
+  @if (error) {
+    <div class="alert alert-danger">{{ error }}</div>
+  }
+
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+
+    <div class="mb-3">
+      <label class="form-label">Product Name</label>
+      <input type="text" class="form-control" formControlName="title">
+
+      @if (productForm.controls.title.touched && productForm.controls.title.invalid) {
+        <small class="text-danger">Product name is required.</small>
+      }
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Description</label>
+      <textarea class="form-control" rows="3" formControlName="description"></textarea>
+
+      @if (productForm.controls.description.touched && productForm.controls.description.invalid) {
+        <small class="text-danger">Description is required.</small>
+      }
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Price ($)</label>
+      <input type="number" class="form-control" formControlName="price">
+
+      @if (productForm.controls.price.touched && productForm.controls.price.invalid) {
+        <small class="text-danger">Enter a price greater than zero.</small>
+      }
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Category</label>
+      <input type="text" class="form-control" formControlName="category">
+
+      @if (productForm.controls.category.touched && productForm.controls.category.invalid) {
+        <small class="text-danger">Category is required.</small>
+      }
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Image URL</label>
+      <input type="text" class="form-control" formControlName="image">
+
+      @if (productForm.controls.image.touched && productForm.controls.image.invalid) {
+        <small class="text-danger">Image URL is required.</small>
+      }
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+      {{ isEditMode ? 'Save Changes' : 'Add Product' }}
+    </button>
+
+    <a routerLink="/products" class="btn btn-secondary ms-2">
+      Cancel
+    </a>
+
+  </form>
+</div>
